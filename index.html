@@ -14,16 +14,16 @@
         background-color: rgb(226, 147, 1);
       }
       body {
-        background: linear-gradient(135deg, rgb(252, 207, 49) 10%, rgb(245, 85, 85) 100%);
+        background: linear-gradient(135deg, #E1341E 10%, #1ECBE1 100%);
       }
     </style>
   </head>
 
   <body class="flex items-center justify-center h-screen bg-gray-100">
     <div
-      class="px-8 pt-4 pb-8 text-lg text-gray-400 bg-black border-2 border-black rounded-lg shadow-lg placeholder:text-gray-200"
+      class="px-8 pt-4 pb-8 text-lg text-gray-400 border-black rounded-lg shadow-lg placeholder:text-gray-200"
     >
-      <!-- Display Section -->
+
       <input
         type="text"
         id="result"
@@ -32,124 +32,123 @@
         readonly
       />
 
-      <!-- Input Section -->
-      <div class="grid grid-cols-4 gap-2">
+      <div class="grid grid-cols-4 ">
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded-full hover:bg-gray-400"
+          class="py-6 px-8 font-bold text-gray-800 bg-gray-300 hover:bg-gray-400"
           onclick="clearResult()"
         >
           C
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded-full hover:bg-gray-400"
+          class="py-6 px-20 font-bold text-gray-800 bg-gray-300 hover:bg-gray-400"
           onclick="appendCharacter('(')"
         >
           (
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-gray-300 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-800 bg-gray-300 hover:bg-gray-400"
           onclick="appendCharacter(')')"
         >
           )
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-orange-500 rounded-full"
+          class="py-6 px-20 font-bold text-gray-800 bg-orange-500"
           onclick="appendCharacter('/')"
         >
           /
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('7')"
         >
           7
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('8')"
         >
           8
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('9')"
         >
           9
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-orange-500 rounded-full"
+          class="p-6 px-20 font-bold text-gray-800 bg-orange-500"
           onclick="appendCharacter('*')"
         >
           *
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('4')"
         >
           4
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('5')"
         >
           5
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('6')"
         >
           6
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-orange-500 rounded-full"
+          class="p-6 px-20 font-bold text-gray-800 bg-orange-500"
           onclick="appendCharacter('-')"
         >
           -
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('1')"
         >
           1
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('2')"
         >
           2
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('3')"
         >
           3
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-orange-500 rounded-full"
+          class="p-6 px-20 font-bold text-gray-800 bg-orange-500"
           onclick="appendCharacter('+')"
         >
           +
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('0')"
         >
           0
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="appendCharacter('.')"
         >
           .
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-300 bg-gray-500 rounded-full hover:bg-gray-400"
+          class="p-6 px-20 font-bold text-gray-300 bg-gray-500 hover:bg-gray-400"
           onclick="calculateResult()"
         >
           =
         </button>
         <button
-          class="px-4 py-2 font-bold text-gray-800 bg-orange-500 rounded-full"
+          class="p-6 px-20 font-bold text-gray-800 bg-orange-500"
           onclick="appendCharacter('%')"
         >
           %
